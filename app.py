@@ -133,12 +133,18 @@ def show_predict():
     features_list = request.get_json()
     print(f"Features: {features_list}")
 
-    model = joblib.load("showsuccess_predictor.joblib")
+    filename = "showsuccess_predictor.pbz2"
+
+    data = bz2.BZ2File(filename, 'rb')
+    model = pickle.load(data)
+
+    # model = joblib.load("showsuccess_predictor.joblib")
     print(f"Model: {model}")
 
     new_list = []
     for feature in features_list:
         new_list.append(int(feature)/100)
+    
 
     prediction = model.predict([new_list])
     print(f"Predicted Followers: {prediction}")
