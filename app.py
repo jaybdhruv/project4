@@ -7,6 +7,8 @@ from flask import Flask, render_template, request, jsonify
 import joblib
 from sklearn.preprocessing import LabelEncoder
 import os
+import bz2file as bz2
+import pickle
 
 # Database Setup
 database = 'tvtimedb'
@@ -81,8 +83,12 @@ def get_your_recommendation():
     moodlist = request.get_json()
     print(f"Features/Moods: {moodlist}")
 
-    filename = "network_predictor.joblib"
-    network_predictor_model = joblib.load(filename)
+    filename = "network_predictor.pbz2"
+
+    data = bz2.BZ2File(filename, 'rb')
+    network_predictor_model = pickle.load(data)
+
+    # network_predictor_model = joblib.load(filename)
     print(f"Model: {network_predictor_model}")
 
     le = LabelEncoder()
