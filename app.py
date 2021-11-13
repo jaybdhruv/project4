@@ -1,17 +1,27 @@
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
-import config
 import requests
 import json
 from flask import Flask, render_template, request, jsonify
 import joblib
 from sklearn.preprocessing import LabelEncoder
+import os
 
 # Database Setup
 database = 'tvtimedb'
-engine = create_engine(
-    f'postgresql://postgres:{config.password}@localhost:{config.port}/{database}')
+
+#check if we're running in heroku and my environmental variable exist
+if 'DATABASE_URL' in os.environ:
+    postgres_url = os.environ['DATABASE_URL']
+
+else:
+    #if we're not running in heroku then try and get my local config password
+    import config
+    postgres_url = f"postgresql://postgres:{config.password}@127.0.0.1:{config.port}/{database}"
+
+
+engine = create_engine(postgres_url)
 
 # reflect an existing database into a new model
 Base = automap_base()
