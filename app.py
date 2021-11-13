@@ -127,7 +127,7 @@ def show_predict():
     features_list = request.get_json()
     print(f"Features: {features_list}")
 
-    model = joblib.load("showsuccess_predictor.h5")
+    model = joblib.load("showsuccess_predictor.joblib")
     print(f"Model: {model}")
 
     new_list = []
