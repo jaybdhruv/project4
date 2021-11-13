@@ -120,8 +120,8 @@ function show_predict() {
 }
 
 
-var resetshow = document.getElementById("resetbtn");
-resetshow.addEventListener('click', clearForm);
+// var resetshow = document.getElementById("resetbtn");
+// resetshow.addEventListener('click', clearForm);
 
 // Reset Button clearForm function code
 
