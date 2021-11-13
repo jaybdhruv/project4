@@ -1,48 +1,26 @@
-backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
-bz2file==0.98
 certifi==2020.12.5
 charset-normalizer==2.0.7
 click==8.0.3
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
-dataclasses==0.8
-decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1631346842025/work
-entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1605121927639/work/dist/entrypoints-0.3-py2.py3-none-any.whl
+colorama==0.4.4
 Flask==2.0.2
 greenlet==1.1.2
 gunicorn==20.1.0
 idna==3.3
 importlib-metadata==4.8.2
-ipykernel @ file:///C:/ci/ipykernel_1596206775157/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython==5.8.0
-ipython-genutils==0.2.0
 itsdangerous==2.0.1
 Jinja2==3.0.3
 joblib==1.1.0
-jupyter-client==5.3.4
-jupyter-core==4.5.0
 MarkupSafe==2.0.1
 numpy==1.19.5
-pickle-mixin==1.0.2
-pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1602536217715/work
-prompt-toolkit==1.0.15
 psycopg2==2.9.2
-Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1629119114968/work
-python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
-pywin32==227
-pyzmq @ file:///D:/bld/pyzmq_1631793604214/work
 requests==2.26.0
 scikit-learn==0.24.2
 scipy==1.5.4
-simplegeneric==0.8.1
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
 sklearn==0.0
 SQLAlchemy==1.4.27
 threadpoolctl==3.0.0
-tornado @ file:///D:/bld/tornado_1610094881553/work
-traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1631041982274/work
 typing-extensions==3.10.0.2
 urllib3==1.26.7
-wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1600965781394/work
 Werkzeug==2.0.2
 wincertstore==0.2
 zipp==3.6.0
