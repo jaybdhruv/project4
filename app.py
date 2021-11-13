@@ -81,7 +81,7 @@ def get_your_recommendation():
     moodlist = request.get_json()
     print(f"Features/Moods: {moodlist}")
 
-    filename = "network_predictor.h5"
+    filename = "network_predictor.joblib"
     network_predictor_model = joblib.load(filename)
     print(f"Model: {network_predictor_model}")
 
